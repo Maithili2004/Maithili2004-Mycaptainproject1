@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>
+            SIGN UP
+        </title>
+    </head>
+    <body>
+        <center><h1>Register Form</h1></center>
+        <form action="#" method="post">
+            { % csrf_token % }
+            { % load static % }
+            <center><div class="container">
+                <div class="imgcontainer">
+                    <img src="{% static 'avatar_img2.png' %}"
+                                 alt="Avatar" class="avatar">
+                </div>
+                <lable for="first_name"><b>First Name: </b></lable>
+                <input type="text" placeholder="enter your first name" name="first_name" required><br>
+                <lable for="last_name"><b>Last Name: </b></lable>
+                <input type="text" placeholder="enter your last name" name="last_name" required><br>
+                <lable for="gender"><b> Gender: </b></lable>
+                <input type="radio" name="gender" value="male" required><br>
+                <lable><b>Male</b></lable>
+                <input type="radio" name="gender" value="female" required><br>
+                <lable><b>Feale</b></lable>
+                <input type="radio" name="gender" value="other" required><br>
+                <lable><b>Other</b></lable>
+                <lable for="dob"><b>DOB: dd/mm/yyyy </b></lable>
+                <lable for="email"><b>Email: </b></lable>
+                <input type="text" placeholder="enter your email" name="email" float="right" required><br>
+                <lable for="password"><b>Password: </b></lable>
+                <input type="text" placeholder="enter your password" name="pwd" required><br>
+                <button type="submit"><b>SUBMIT></b></button>
+                Already  have an account <a href="http://localhost:8000/login/">Login</a>
+            </div> </center>
+        </form>
+    </body>
+</html>
